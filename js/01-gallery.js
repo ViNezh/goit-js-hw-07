@@ -27,11 +27,22 @@ function handleClick(event) {
   event.preventDefault();
   //   console.log(event.target.dataset.source);
   // Виклик модального вікна бібліотекою basicLightbox
-  basicLightbox
-    .create(
-      `
+  const gallery = basicLightbox.create(
+    `
   		<img width="1280px" src="${event.target.dataset.source}">
-  	`
-    )
-    .show();
+  	`,
+    // Умова закриття модального вікна при натисканні ESC
+    {
+      onShow: gallery => {
+        function listener(event) {
+          console.log(Event);
+          if (event.key === 'Escape') {
+            gallery.close();
+          }
+        }
+        document.addEventListener('keydown', listener);
+      },
+    }
+  );
+  gallery.show();
 }
