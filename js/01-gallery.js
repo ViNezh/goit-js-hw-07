@@ -34,13 +34,13 @@ function handleClick(event) {
     // Умова закриття модального вікна при натисканні ESC
     {
       onShow: gallery => {
+        document.addEventListener('keydown', listener);
         function listener(event) {
           console.log(Event);
           if (event.key === 'Escape') {
             gallery.close();
           }
         }
-        document.addEventListener('keydown', listener);
       },
     }
   );

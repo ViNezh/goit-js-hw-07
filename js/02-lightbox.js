@@ -21,6 +21,7 @@ ulEl.addEventListener('click', handleClick);
 // Функція обробки події клік по картинці
 function handleClick(event) {
   event.preventDefault();
+  
    // Виклик модального вікна бібліотекою SimpleLightbox
   let gallery = new SimpleLightbox('.gallery__link',
     {
@@ -28,8 +29,9 @@ function handleClick(event) {
     captionSelector:'img',
     captionsData: 'alt',
     captionPosition: 'bottom',
-      captionDelay: 250,
-    history:true,
+    captionDelay: 250,
+    navText:    ['&lsaquo;','&rsaquo;'],
     }
   );
+  
 }
