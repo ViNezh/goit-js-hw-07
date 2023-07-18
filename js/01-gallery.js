@@ -27,7 +27,7 @@ function handleClick(event) {
   event.preventDefault();
   //   console.log(event.target.dataset.source);
   // Виклик модального вікна бібліотекою basicLightbox
-  const gallery = basicLightbox.create(
+  let gallery = basicLightbox.create(
     `
   		<img width="1280px" src="${event.target.dataset.source}">
   	`,
