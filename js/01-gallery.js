@@ -36,7 +36,6 @@ function handleClick(event) {
       onShow: gallery => {
         document.addEventListener('keydown', listener);
         function listener(event) {
-          console.log(Event);
           if (event.key === 'Escape') {
             gallery.close();
           }
