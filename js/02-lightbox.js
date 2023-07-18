@@ -16,12 +16,7 @@ const markupLiEl = galleryItems
   .join('');
 //Додавання всіх елементів за один раз
 ulEl.insertAdjacentHTML('beforeend', markupLiEl);
-// Прослуховування подій на всьому списку
-ulEl.addEventListener('click', handleClick);
-// Функція обробки події клік по картинці
-function handleClick(event) {
-  event.preventDefault();
-  }
+
 // Виклик модального вікна бібліотекою SimpleLightbox
 let gallery = new SimpleLightbox('.gallery__link',
     {
